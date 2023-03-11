@@ -27,8 +27,14 @@ let personNames = []
 
 function addName() {
      let name = input.value;
+     console.log(typeof (name))
+     var letters = /^[A-Za-z]+$/;
 
-     name == "" ? alert("Name cannot be empty.") : personNames.push(name);
+     name.match(letters)
+          ?
+          name == "" ? alert("Name cannot be empty.") : personNames.push(name)
+          :
+          alert("Please enter valid name")
 
      input.value = "";
      console.log(personNames);
